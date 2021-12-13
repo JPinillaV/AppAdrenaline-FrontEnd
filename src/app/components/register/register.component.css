@@ -1,10 +1,10 @@
 .movil {
   position: absolute;
-  padding-left: 300px;
+  padding-left: 350px;
   padding-top: 150px;
 }
 .row {
-  position: fixed left;
+  position: absolute left;
   padding-top: 200px;
-  padding-left: 200px;
+  padding-left: 450px;
 }

@@ -14,15 +14,16 @@ export class RegisterComponent implements OnInit {
       nombre: new FormControl(),
       username: new FormControl(),
       password: new FormControl(),
+      repeat_password: new FormControl(),
       email: new FormControl(),
     });
   }
 
   ngOnInit(): void {}
   onSubmit() {
-    // this.usuariosservice
-    //   .register(this.formulario.value)
-    //   .then((response) => console.log(response))
-    //   .catch((err) => console.log(err));
+    this.usuariosservice
+      .register(this.formulario.value)
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err));
   }
 }
