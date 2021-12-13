@@ -4,10 +4,14 @@
       <div class="logo">
         <img src="../assets/images/logo.png" alt="" />
       </div>
-      <button><fa-icon [icon]="faHome" size="lg"></fa-icon></button>
+      <button [routerLink]="['/home']">
+        <fa-icon [icon]="faHome" size="lg"></fa-icon>
+      </button>
       <button><fa-icon [icon]="faSearch" size="lg"></fa-icon></button>
       <button><fa-icon [icon]="faPlusCircle" size="lg"></fa-icon></button>
-      <button><fa-icon [icon]="faHeart" size="lg"></fa-icon></button>
+      <button>
+        <fa-icon class="heart" [icon]="faHeart" size="lg"></fa-icon>
+      </button>
       <button><fa-icon [icon]="faUser" size="lg"></fa-icon></button>
     </div>
   </nav>

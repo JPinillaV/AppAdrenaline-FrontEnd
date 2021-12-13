@@ -19,8 +19,13 @@
 }
 
 .nav > button:hover {
-  background-color: lightblue;
+  background-color: rgb(82, 202, 241);
+  border-radius: 100%;
 }
 .logo {
   position: fixed;
+  padding-top: 50px;
+}
+.heart {
+  color: crimson;
 }
