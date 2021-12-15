@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './profile/profile.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

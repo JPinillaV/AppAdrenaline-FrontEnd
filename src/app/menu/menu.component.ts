@@ -6,13 +6,15 @@ import {
   faSearch,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import { ClientesService } from 'src/app/clientes.service';
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class MenuComponent implements OnInit {
+  title = 'my-AppAdrenaline';
+
+  /*Agregar las siguientes líneas*/
   faHome = faHome;
   faSearch = faSearch;
   faPlusCircle = faPlusCircle;

@@ -27,6 +27,7 @@ export class UsuariosService {
         Authorization: localStorage.getItem('token_adrenaline')!,
       }),
     };
+
     // return this.httpClient.post(`${this.baseUrl}/registro`, formValues).toPromise();
     return firstValueFrom(
       this.httpClient.post<any>(

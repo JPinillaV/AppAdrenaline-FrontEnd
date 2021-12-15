@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ClientesService } from '../clientes.service';
 import { UsuariosService } from '../service/usuarios.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -13,7 +13,8 @@ export class ProfileComponent implements OnInit {
   files: any;
   constructor(
     private usuariosservice: UsuariosService,
-    private clientesService: ClientesService
+    private clientesService: ClientesService,
+    private router: Router
   ) {
     this.formulario = new FormGroup({
       nombre: new FormControl(),
@@ -39,9 +40,14 @@ export class ProfileComponent implements OnInit {
     formdata.append('nombre', this.formulario.value.nombre);
     formdata.append('username', this.formulario.value.username);
     formdata.append('email', this.formulario.value.email);
-    this.usuariosservice
+
+    this.clientesService
       .update(formdata)
-      .then((response) => console.log(response))
+      .then((response) => {
+        if (response) {
+          this.router.navigate(['/home']);
+        }
+      })
       .catch((err) => console.log(err));
   }
   onChange($event: any): any {

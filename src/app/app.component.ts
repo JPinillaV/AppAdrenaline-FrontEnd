@@ -13,12 +13,11 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'my-AppAdrenaline';
-
-  /*Agregar las siguientes líneas*/
-  faHome = faHome;
-  faSearch = faSearch;
-  faPlusCircle = faPlusCircle;
-  faHeart = faHeart;
-  faUser = faUser;
+  // title = 'my-AppAdrenaline';
+  // /*Agregar las siguientes líneas*/
+  // faHome = faHome;
+  // faSearch = faSearch;
+  // faPlusCircle = faPlusCircle;
+  // faHeart = faHeart;
+  // faUser = faUser;
 }

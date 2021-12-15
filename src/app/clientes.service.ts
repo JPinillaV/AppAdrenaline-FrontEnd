@@ -43,4 +43,16 @@ export class ClientesService {
       this.httpClient.post<any>(this.baseUrl, formValues, httpOptions)
     );
   }
+  update(formValues: any) {
+    const options = {
+      headers: new HttpHeaders({
+        Authorization: localStorage.getItem('token_adrenaline')!,
+      }),
+    };
+
+    // return this.httpClient.post(`${this.baseUrl}/registro`, formValues).toPromise();
+    return firstValueFrom(
+      this.httpClient.post<any>(`${this.baseUrl}/update`, formValues, options)
+    );
+  }
 }
