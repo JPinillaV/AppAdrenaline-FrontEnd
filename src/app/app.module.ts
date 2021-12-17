@@ -11,6 +11,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './profile/profile.component';
 import { MenuComponent } from './menu/menu.component';
+import { StoriesComponent } from './stories/stories.component';
+import { PostsComponent } from './posts/posts.component';
+import { UserLogadoComponent } from './user-logado/user-logado.component';
+import { UserProfilePostComponent } from './user-profile-post/user-profile-post.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { MenuComponent } from './menu/menu.component';
     RegisterComponent,
     ProfileComponent,
     MenuComponent,
+    StoriesComponent,
+    PostsComponent,
+    UserLogadoComponent,
+    UserProfilePostComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,14 +3,15 @@
   padding: 0;
 }
 .phone {
-  padding-top: 70px;
-  height: 650px;
+  padding-top: 0px;
+  height: 730px;
+  width: 450px;
   float: right;
   margin: 10px;
 }
 
 body {
-  background-color: #fafafa !important ;
+  background-color: #efefef !important ;
 }
 .container {
   margin-top: 20px;

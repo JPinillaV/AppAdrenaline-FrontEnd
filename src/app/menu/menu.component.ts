@@ -5,6 +5,7 @@ import {
   faPlusCircle,
   faSearch,
   faUser,
+  faSignOutAlt,
 } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-menu',
@@ -20,6 +21,7 @@ export class MenuComponent implements OnInit {
   faPlusCircle = faPlusCircle;
   faHeart = faHeart;
   faUser = faUser;
+  faSignOutAlt = faSignOutAlt;
   constructor() {}
 
   ngOnInit(): void {}
