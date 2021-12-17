@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'stories', component: StoriesComponent },
   { path: 'posts', component: PostsComponent },
   { path: 'userLogado', component: UserLogadoComponent },
-  { path: 'userProfilePost', component: UserProfilePostComponent },
+  { path: 'userProfile/:id', component: UserProfilePostComponent },
 ];
 
 @NgModule({

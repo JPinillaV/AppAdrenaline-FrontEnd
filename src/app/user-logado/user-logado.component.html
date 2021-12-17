@@ -11,12 +11,16 @@
     "
   >
     <img
+      class="btn"
       [src]="userLogado?.photo"
       alt="..."
       style="transform: scale(1.5); width: 100%; position: absolute; left: 0"
     />
   </div>
-  <div class="profile-info ml-3" [routerLink]="['/profile']">
+  <div
+    class="btn profile-info ml-3"
+    [routerLink]="['/userProfile', userLogado?.id]"
+  >
     <span class="profile-info-username">{{ userLogado?.nombre }}</span>
     <span class="profile-info-name">{{ userLogado?.username }}</span>
   </div>

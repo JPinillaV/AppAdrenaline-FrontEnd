@@ -44,6 +44,18 @@ export class ClientesService {
       this.httpClient.post<any>(this.baseUrl, formValues, httpOptions)
     );
   }
+
+  getUserById(pId: number): Promise<Cliente> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: localStorage.getItem('token_adrenaline')!,
+      }),
+    };
+    return firstValueFrom(
+      this.httpClient.get<Cliente>(this.baseUrl + '/' + pId, httpOptions)
+    );
+  }
+
   update(formValues: any) {
     const options = {
       headers: new HttpHeaders({

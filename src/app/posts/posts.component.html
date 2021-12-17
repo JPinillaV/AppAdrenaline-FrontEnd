@@ -15,6 +15,8 @@
           "
         >
           <img
+            class="btn"
+            [routerLink]="['/userProfile', post.usuario_id]"
             src="{{ post.photo }}"
             alt="..."
             style="
@@ -25,7 +27,11 @@
             "
           />
         </div>
-        <span class="font-weight-bold">{{ post.nombre }}</span>
+        <span
+          class="btn font-weight-bold"
+          [routerLink]="['/userProfile', post.usuario_id]"
+          >{{ post.nombre }}</span
+        >
       </div>
     </div>
     <div class="card-body p-0">

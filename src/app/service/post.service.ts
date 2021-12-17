@@ -19,12 +19,14 @@ export class PostService {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl, httpOptions));
   }
 
-  getPostById(): Promise<any> {
+  getPostById(pId: number): Promise<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         Authorization: localStorage.getItem('token_adrenaline')!,
       }),
     };
-    return firstValueFrom(this.httpClient.get<any>(this.baseUrl, httpOptions));
+    return firstValueFrom(
+      this.httpClient.get<any>(this.baseUrl + '/user/' + pId, httpOptions)
+    );
   }
 }
