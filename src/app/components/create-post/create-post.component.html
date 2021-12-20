@@ -1,1 +1,115 @@
-<p>create-post works!</p>
+<app-menu></app-menu>
+<header>
+  <div class="container">
+    <div class="profile">
+      <div class="profile-image">
+        <img class="img" src="{{ user?.photo }}" />
+      </div>
+
+      <div class="profile-user-settings">
+        <h1 class="profile-user-name">{{ user?.nombre }}</h1>
+
+        <button class="btn profile-settings-btn" aria-label="profile settings">
+          <i class="fas fa-cog" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="profile-stats">
+        <ul>
+          <li><span class="profile-stat-count">164</span> posts</li>
+          <li><span class="profile-stat-count">188</span> followers</li>
+          <li><span class="profile-stat-count">206</span> following</li>
+        </ul>
+      </div>
+
+      <div class="profile-bio">
+        <p>
+          <span class="profile-real-name">{{ user?.username }}</span>
+          Hiii!!!!!! I'm {{ user?.nombre }} and this are some of mi pictures!
+          📷✈️🏕️
+        </p>
+      </div>
+    </div>
+    <!-- End of profile section -->
+  </div>
+  <!-- End of container -->
+</header>
+<div class="row">
+  <div class="col-4 offset-md-4">
+    <h3 class="mb-3">NEW POST</h3>
+    <form
+      [formGroup]="formulario"
+      (ngSubmit)="onSubmit()"
+      enctype="multipart/form-data"
+    >
+      <div
+        class="
+          rounded-circle
+          overflow-hidden
+          d-flex
+          justify-content-center
+          align-items-center
+          border border-danger
+          story-profile-photo
+        "
+      >
+        <img
+          src="{{ user?.photo }}"
+          alt="..."
+          style="
+            transform: scale(1.5);
+            width: 100%;
+            position: absolute;
+            left: 0;
+          "
+        />
+      </div>
+      <br />
+      <div class="mb-3">
+        <div class="file-upload-wrapper">
+          <input
+            name="photoPost"
+            type="file"
+            (change)="onChange($event)"
+            id="input-file-now"
+            class="file-upload"
+          />
+        </div>
+      </div>
+
+      <input type="submit" class="btn btn-info" value="Enviar" />
+    </form>
+  </div>
+</div>
+<br />
+<br />
+<br />
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div class="column-xs-12">
+        <ul class="social">
+          <li>
+            <a href="" target="_blank" rel="noopener noreferrer"
+              ><span class="fab fa-twitter"
+                >Thanks for waching my App!!!</span
+              ></a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://github.com/JpinillaV"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="fab fa-github"
+                >Do you wanna see other's projects?
+              </span></a
+            >
+          </li>
+        </ul>
+        <p class="copyright">&copy; Copyright 2021 Jorge Pinilla Valera</p>
+      </div>
+    </div>
+  </div>
+</footer>

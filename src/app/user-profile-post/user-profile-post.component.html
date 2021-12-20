@@ -12,7 +12,10 @@
         <button class="btn profile-edit-btn" [routerLink]="['/profile']">
           Edit Profile
         </button>
-        <button class="btn profile-edit-btn" [routerLink]="['/profile']">
+        <button
+          class="btn profile-edit-btn"
+          [routerLink]="['/createPost', user?.id]"
+        >
           New Post
         </button>
 

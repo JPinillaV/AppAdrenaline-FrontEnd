@@ -19,6 +19,19 @@ export class PostService {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl, httpOptions));
   }
 
+  create(formdata: any): Promise<any> {
+    console.log(formdata);
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: localStorage.getItem('token_adrenaline')!,
+      }),
+    };
+    return firstValueFrom(
+      this.httpClient.post<any>(this.baseUrl + '/create', formdata, httpOptions)
+    );
+  }
+
   getPostById(pId: number): Promise<any> {
     const httpOptions = {
       headers: new HttpHeaders({
