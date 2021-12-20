@@ -121,7 +121,11 @@
                 </a>
               </li>
               <li class="list-inline-item ml-2 align-middle">
-                <a [routerLink]="['/login']" class="link-menu">
+                <a
+                  (click)="onClickLogout()"
+                  *ngIf="!isLogged"
+                  class="link-menu"
+                >
                   <div
                     class="
                       rounded-circle
@@ -146,9 +150,30 @@
                   </div>
                 </a>
               </li>
-              <li class="list-inline-item ml-2">
-                <a href="#" class="link-menu">
-                  <i class="fas fa-sign-out-alt"></i>
+              <li class="list-inline-item ml-2 align-middle">
+                <a [routerLink]="['/login']" *ngIf="isLogged" class="link-menu">
+                  <div
+                    class="
+                      rounded-circle
+                      overflow-hidden
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                      border
+                      topbar-profile-photo
+                    "
+                  >
+                    <img
+                      src="../../../assets/images/profiles/profile-6.jpg"
+                      alt="..."
+                      style="
+                        transform: scale(1.5);
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                      "
+                    />
+                  </div>
                 </a>
               </li>
             </ul>

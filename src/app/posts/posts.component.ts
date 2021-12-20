@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Post } from '../interfaces/post.interface';
+import { LikesService } from '../service/likes.service';
 import { PostService } from '../service/post.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class PostsComponent implements OnInit {
   numero: number = 300;
 
   arrPost: any[];
-  constructor(private postService: PostService) {
+  constructor(
+    private postService: PostService,
+    private likesService: LikesService
+  ) {
     this.arrPost = [];
   }
 

@@ -280,7 +280,11 @@ div:nth-child(4) {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
+footer {
+  padding: 1rem 0;
+  background: #f7f7f7;
+  text-align: center;
+}
 /* Extras */
 /**************************/
 #parallax-world-of-ugg .line-break {
