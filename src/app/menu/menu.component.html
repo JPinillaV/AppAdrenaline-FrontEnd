@@ -100,7 +100,11 @@
                 </a>
               </li>
               <li class="list-inline-item ml-2">
-                <a href="#" class="link-menu">
+                <a
+                  href=""
+                  class="link-menu"
+                  [routerLink]="['/userProfile', userLogado?.id]"
+                >
                   <svg
                     width="1.5em"
                     height="1.5em"

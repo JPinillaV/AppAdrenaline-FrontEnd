@@ -15,6 +15,8 @@ import { StoriesComponent } from './stories/stories.component';
 import { PostsComponent } from './posts/posts.component';
 import { UserLogadoComponent } from './user-logado/user-logado.component';
 import { UserProfilePostComponent } from './user-profile-post/user-profile-post.component';
+import { PresentationComponent } from '../app/components/presentation/presentation.component';
+import { CreatePostComponent } from './components/create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { UserProfilePostComponent } from './user-profile-post/user-profile-post.
     PostsComponent,
     UserLogadoComponent,
     UserProfilePostComponent,
+    PresentationComponent,
+    CreatePostComponent,
   ],
   imports: [
     BrowserModule,

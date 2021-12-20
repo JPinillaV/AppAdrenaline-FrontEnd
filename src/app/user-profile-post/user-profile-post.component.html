@@ -1,17 +1,20 @@
+<app-menu></app-menu>
 <header>
   <div class="container">
     <div class="profile">
       <div class="profile-image">
-        <img
-          src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
-          alt=""
-        />
+        <img class="img" src="{{ user?.photo }}" />
       </div>
 
       <div class="profile-user-settings">
         <h1 class="profile-user-name">{{ user?.nombre }}</h1>
 
-        <button class="btn profile-edit-btn">Edit Profile</button>
+        <button class="btn profile-edit-btn" [routerLink]="['/profile']">
+          Edit Profile
+        </button>
+        <button class="btn profile-edit-btn" [routerLink]="['/profile']">
+          New Post
+        </button>
 
         <button class="btn profile-settings-btn" aria-label="profile settings">
           <i class="fas fa-cog" aria-hidden="true"></i>
@@ -43,7 +46,19 @@
   <div class="container">
     <div class="gallery">
       <div class="gallery-item" tabindex="0" *ngFor="let post of arrPost">
-        <img src="{{ post.photoPost }}" class="gallery-image" alt="" />
+        <img
+          src="{{ post.photoPost }}"
+          class="gallery-image"
+          *ngIf="!isVideo(post.photoPost)"
+          alt=""
+        />
+        <video
+          controls
+          src="{{ post.photoPost }}"
+          class="gallery-image"
+          *ngIf="isVideo(post.photoPost)"
+          alt=""
+        ></video>
 
         <div class="gallery-item-info">
           <ul>
