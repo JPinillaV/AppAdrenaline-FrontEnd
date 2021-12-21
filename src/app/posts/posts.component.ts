@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ClientesService } from '../clientes.service';
+import { Cliente } from '../interfaces/cliente.interface';
+
 import { Post } from '../interfaces/post.interface';
 import { LikesService } from '../service/likes.service';
 import { PostService } from '../service/post.service';
@@ -10,18 +13,22 @@ import { PostService } from '../service/post.service';
   styleUrls: ['./posts.component.css'],
 })
 export class PostsComponent implements OnInit {
-  numero: number = 300;
-
+  userLogado: Cliente | undefined;
+  numero: any = 300;
+  arrlike: any[];
   arrPost: any[];
   constructor(
     private postService: PostService,
-    private likesService: LikesService
+    private likesService: LikesService,
+    private clientesService: ClientesService
   ) {
+    this.arrlike = [];
     this.arrPost = [];
   }
 
   async ngOnInit(): Promise<void> {
     this.arrPost = await this.postService.getAll();
+    this.arrlike = await this.likesService.getlikesById();
   }
   scoreLikes() {
     this.numero += 1;

@@ -24,11 +24,61 @@
 .logo {
   color: #000000;
 } */
-footer {
+/* footer {
   padding: 1rem 0;
   background: #f7f7f7;
   text-align: center;
+} */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #111;
 }
+.footer .sci {
+  position: relative;
+  display: flex;
+  margin-top: 30px;
+}
+.footer .sci li {
+  list-style: none;
+}
+.footer .sci li a {
+  text-decoration: none;
+  margin: 0 20px;
+}
+.footer .sci li a img {
+  filter: invert(1);
+  max-width: 20px;
+}
+.copyrightText {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+  text-align: center;
+}
+.copyrightText a {
+  color: #fff;
+  text-decoration: none;
+}
+/* footer {
+  padding: 1rem 0;
+  background: #f7f7f7;
+  text-align: center;
+} */
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {
+  border-bottom: 1px solid black;
+  width: 150px;
+  margin: 0 auto;
+}
+
 .link-menu {
   color: black;
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreatePostComponent } from './components/create-post/create-post.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'stories', component: StoriesComponent, canActivate: [LoginGuard] },
   { path: 'posts', component: PostsComponent, canActivate: [LoginGuard] },
   { path: 'userLogado', component: UserLogadoComponent },
+  { path: 'footer', component: FooterComponent, canActivate: [LoginGuard] },
   {
     path: 'userProfile/:id',
     component: UserProfilePostComponent,

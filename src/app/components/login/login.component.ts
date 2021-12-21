@@ -21,25 +21,24 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {
     this.formulario = new FormGroup({
-      email: new FormControl('nat@gmail.com'),
-      password: new FormControl('1234'),
+      email: new FormControl(),
+      password: new FormControl(),
     });
     this.error = '';
   }
 
-  async ngOnInit(): Promise<void> {
-    this.userLogado = await this.clientesService.getUser();
-  }
+  async ngOnInit(): Promise<void> {}
 
   onSubmit() {
     this.error = '';
     this.usuariosService
       .login(this.formulario.value)
-      .then((response) => {
+      .then(async (response) => {
         if (response.error) {
           this.error = response.error;
         } else {
           localStorage.setItem('token_adrenaline', response.token);
+          this.userLogado = await this.clientesService.getUser();
           Swal.fire({
             position: 'top',
             icon: 'success',

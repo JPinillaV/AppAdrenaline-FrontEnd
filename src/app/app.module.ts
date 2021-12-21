@@ -17,6 +17,7 @@ import { UserLogadoComponent } from './user-logado/user-logado.component';
 import { UserProfilePostComponent } from './user-profile-post/user-profile-post.component';
 import { PresentationComponent } from '../app/components/presentation/presentation.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
     UserProfilePostComponent,
     PresentationComponent,
     CreatePostComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

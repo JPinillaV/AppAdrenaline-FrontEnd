@@ -9,10 +9,15 @@
       <div class="profile-user-settings">
         <h1 class="profile-user-name">{{ user?.nombre }}</h1>
 
-        <button class="btn profile-edit-btn" [routerLink]="['/profile']">
+        <button
+          class="btn profile-edit-btn"
+          *ngIf="isLogged"
+          [routerLink]="['/profile']"
+        >
           Edit Profile
         </button>
         <button
+          *ngIf="isLogged"
           class="btn profile-edit-btn"
           [routerLink]="['/createPost', user?.id]"
         >

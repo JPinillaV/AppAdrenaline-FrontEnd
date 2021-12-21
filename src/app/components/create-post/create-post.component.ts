@@ -31,8 +31,7 @@ export class CreatePostComponent implements OnInit {
 
   onSubmit() {
     let formdata = new FormData();
-    console.log(this.files[0]);
-    formdata.append('idTypePost', '1');
+    // console.log(this.files[0]);
     formdata.append('photoPost', this.files[0]);
 
     this.postService
