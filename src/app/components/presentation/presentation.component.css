@@ -272,6 +272,7 @@ section .header {
   align-items: center;
   justify-content: center;
 }
+
 .footer {
   display: flex;
   justify-content: center;
